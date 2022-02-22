@@ -45,6 +45,6 @@ jobs:
       -  name: List files after checkout #check if works
          run: | # for multiline add pipe
            pwd
-           ls
+           cat GitHubActions/message.txt
       - name: payload
         run: echo ${{ github.event.client_payload.env }}
