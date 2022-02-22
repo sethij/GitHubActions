@@ -9,5 +9,7 @@ GitHub Actions
    https://docs.github.com/en/rest/reference/repos#create-a-repository-dispatch-event
  - Pattern cheat sheet
    https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+-  Default env variable 
+   https://docs.github.com/en/actions/learn-github-actions/environment-variables
 
 Runner - https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
