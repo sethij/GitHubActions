@@ -47,4 +47,4 @@ jobs:
            pwd
            ls
       - name: payload
-        run: echo ${{ github.event.client-payload.env }}
+        run: echo ${{ github.event.client_payload.env }}
