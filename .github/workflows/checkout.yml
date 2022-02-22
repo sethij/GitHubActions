@@ -1,5 +1,5 @@
 name: action worklow name
-on: [push,pull_request]
+on:
 ## OR -
 #on:
 #  push:
@@ -10,19 +10,19 @@ on: [push,pull_request]
 #    - cron: "0/5 * * * *"
 
 #  Manual event
-#  repository_dispatch:
-#    types: [build]
+  repository_dispatch:
+    types: [build]
 
 # filter some branch or tag
-  push: # or pull request
-    branches:
-      - master
-      - 'feature/*' #or patterns that matches - matches - feature/featA, doesn't matches feature/feat/A - for this can use feature/**
-      - '!feature/featC' # to ignore particular branch... at end of patterns
-    tags:
-      - v1.*
-    paths:
-      - '**.js'
+#  push: # or pull request
+#    branches:
+#      - master
+#      - 'feature/*' #or patterns that matches - matches - feature/featA, doesn't matches feature/feat/A - for this can use feature/**
+#      - '!feature/featC' # to ignore particular branch... at end of patterns
+#    tags:
+#      - v1.*
+#    paths:
+#      - '**.js'
 #  same but for ignoring the branches. Note: can't have branches and branches-ignore at same time (same for tags and paths - docs/**)
 #    branches-ignore:
 #      -
