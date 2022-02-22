@@ -1,5 +1,6 @@
 name: action worklow name
-on: [push]
+on:
+#  [push]
 ## OR -
 #on:
 #  push:
@@ -14,9 +15,9 @@ on: [push]
 #    types: [build]
 
 # filter some branch or tag
-#  push: # or pull request
-#    branches:
-#      - master
+  push: # or pull request
+    branches:
+      - '!main'
 #      - 'feature/*' #or patterns that matches - matches - feature/featA, doesn't matches feature/feat/A - for this can use feature/**
 #      - '!feature/featC' # to ignore particular branch... at end of patterns
 #    tags:
