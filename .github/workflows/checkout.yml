@@ -1,5 +1,5 @@
 name: action worklow name
-on:
+on: [push]
 ## OR -
 #on:
 #  push:
@@ -10,8 +10,8 @@ on:
 #    - cron: "0/5 * * * *"
 
 #  Manual event
-  repository_dispatch:
-    types: [build]
+#  repository_dispatch:
+#    types: [build]
 
 # filter some branch or tag
 #  push: # or pull request
@@ -45,6 +45,7 @@ jobs:
       -  name: List files after checkout #check if works
          run: | # for multiline add pipe
            pwd
-           cat GitHubActions/message.txt
-      - name: payload
-        run: echo ${{ github.event.client_payload.env }}
+           ls
+           cat message.txt
+#      - name: payload
+#        run: echo ${{ github.event.client_payload.env }}
