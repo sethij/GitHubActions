@@ -5,6 +5,27 @@ on: [push,pull_request]
 #  push:
 #  pull_request:
 #    types: [closed, assigned, opened, reopened]
+
+#  schedule:
+#    - cron: "0/5 * * * *"
+
+#  Manual event
+#  repository_dispatch:
+#    types: [build]
+
+# filter some branch or tag
+  push: # or pull request
+    branches:
+      - master
+      - 'feature/*' #or patterns that matches - matches - feature/featA, doesn't matches feature/feat/A - for this can use feature/**
+      - '!feature/featC' # to ignore particular branch... at end of patterns
+    tags:
+      - v1.*
+    paths:
+      - '**.js'
+#  same but for ignoring the branches. Note: can't have branches and branches-ignore at same time (same for tags and paths - docs/**)
+#    branches-ignore:
+#      -
 jobs:
   action-name:
     runs-on: ubuntu-latest
@@ -17,11 +38,13 @@ jobs:
            echo $GITHUB_REPOSITORY
            echo $GITHUB_WORKSPACE
            echo "${{ github.token }}"
-           git clone git@github:username/reponame =>  git clone git@github:$GITHUB_REPOSITORY
-           git checkout $GITHUB_SHA #current commit
+#           git clone git@github:username/reponame =>  git clone git@github:$GITHUB_REPOSITORY
+#           git checkout $GITHUB_SHA #current commit
       -  name: checkout
          uses: actions/checkout@v2 # this checkouts the repository in our current folder, alternative to this is git clone in run
-      -  name: List files after checkout
+      -  name: List files after checkout #check if works
          run: | # for multiline add pipe
            pwd
            ls
+#      - name: payload
+#        run: echo ${{ github.event.client-payload.env }}
