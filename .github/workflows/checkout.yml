@@ -11,13 +11,13 @@ on:
 #    - cron: "0/5 * * * *"
 
 #  Manual event
-#  repository_dispatch:
-#    types: [build]
+  repository_dispatch:
+    types: [build]
 
 # filter some branch or tag
-  push: # or pull request
-    branches:
-      - '!main'
+#  push: # or pull request
+#    branches:
+#      - '!main'
 #      - 'feature/*' #or patterns that matches - matches - feature/featA, doesn't matches feature/feat/A - for this can use feature/**
 #      - '!feature/featC' # to ignore particular branch... at end of patterns
 #    tags:
