@@ -10,7 +10,7 @@ GitHub Actions
  - Pattern cheat sheet
    https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
 -  Default env variable 
-   https://docs.github.com/en/actions/learn-github-actions/environment-variablesGITHUB
+   https://docs.github.com/en/actions/learn-github-actions/environment-variables
    
 -  GITHUB_TOKEN https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 
