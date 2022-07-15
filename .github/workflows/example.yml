@@ -18,7 +18,7 @@ jobs:
         uses: actions/hello-world-javascript-action@v1
 # to provide input to action
         with:
-          who-to-greet: Jagriti
+          who-to-greet: Jagriti Sethi
 #output example
       - name: log greeting time
         run: echo "${{ steps.greet.outputs.time }}"
